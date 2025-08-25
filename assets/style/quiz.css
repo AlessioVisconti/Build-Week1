@@ -1,0 +1,27 @@
+body {
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  color: white;
+  font-family: sans-serif;
+}
+.background {
+  margin: 22rem 0rem 6rem 12rem;
+  margin: 22rem 0rem 6rem 12rem;
+  padding: 2em 0em 0em 27em;
+}
+#domanda {
+}
+.logo {
+  width: 200px;
+}
+.bottone {
+  width: 21em;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: #242a4f;
+  border-color: white;
+  box-shadow: -4px -2px 2px 1px rgba(0, 0, 0, 0.57);
+}
