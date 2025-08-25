@@ -1,0 +1,77 @@
+body {
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  color: white;
+  font-family: sans-serif;
+}
+.background {
+  margin: 22rem 0rem 6rem 12rem;
+  margin: 22rem 0rem 6rem 12rem;
+  padding: 2em 0em 0em 27em;
+}
+.background h1 {
+  font-size: 6em;
+  font-weight: lighter;
+}
+.background span {
+  font-weight: 700;
+}
+.nonAttivo {
+  font-size: 32px;
+  background-color: #324f4f;
+  padding: 10px 47px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px #324f4f, 0 0 20px #324f4f, 0 0 30px #324f4f;
+  text-shadow: 0 0 5px #324f4f;
+  font-weight: 700;
+  margin-left: 15em;
+}
+.attivo {
+  font-size: 32px;
+  background-color: #00ffff;
+  padding: 10px 47px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+  font-weight: 700;
+  margin-left: 15em;
+}
+.logo {
+  width: 200px;
+}
+p {
+  font-size: 25px;
+}
+p strong {
+  font-size: 2em;
+  font-weight: 750;
+  color: #c2128d;
+}
+ul {
+  margin-bottom: 7em;
+}
+li {
+  font-size: 22px;
+  margin-bottom: 1em;
+}
+.checkboxx {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: -3px;
+}
+.checkboxx-Attiva {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: -3px;
+}
