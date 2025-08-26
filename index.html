@@ -39,24 +39,36 @@
 
   <body>
     <div class="background">
-      <div id="idLogo"><img src="./assets/img/epicode_logo.png" alt="logo epicode" class="logo" /></div>
+      <div id="idLogo">
+        <img src="./assets/img/epicode_logo.png" alt="logo epicode" class="logo" />
+      </div>
       <h1>Welcome to <br /><span>your exam</span></h1>
       <p><strong>Instructions</strong></p>
-      <p>We don't expect most engineers to know the answers to all of these <br />questions, so don't worry if you're unsure of a few of them.</p>
+      <p>
+        We don't expect most engineers to know the answers to all of these
+        <br />questions, so don't worry if you're unsure of a few of them.
+      </p>
       <ul>
         <li>Each question is <strong>timed</strong> and can only be <strong>answered once</strong>.</li>
-        <li>Changing browser tab or opening other windows will <strong>invalidate the question</strong>.</li>
+        <li>
+          Changing browser tab or opening other windows will
+          <strong>invalidate the question</strong>.
+        </li>
         <li>This exam will take approx. <strong>0-5 minutes</strong>.</li>
       </ul>
       <div>
         <label> <input type="checkbox" id="checkboxPromessa" class="checkboxx" />I promise to answer my self without help from anyone </label>
-        <button class="nonAttivo" a href="./assets/index/difficult.html">PROCEED</button>
+
+        <button id="proceedBtn" class="nonAttivo" href="./assets/index/quizz.html" disabled>PROCEED</button>
       </div>
     </div>
     <!-- <div class="background">scegli la difficoltà</div>
     <div class="background">quizz</div>
     <div class="background">risultato</div>
     <div class="background">Rate Us</div> -->
-    <script></script>
+
+    <script src="./assets/js/welcomepagebtn.js"></script>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
