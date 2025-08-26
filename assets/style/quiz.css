@@ -10,23 +10,42 @@ body {
   margin: 7rem 0rem 6rem 12rem;
   padding: 2em 0em 0em 27em;
 }
-#domanda {
-}
 .logo {
   width: 200px;
 }
+.counter {
+  margin-top: -2em;
+  margin-left: 49em;
+  margin-bottom: 8em;
+  width: 20%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 0.2em solid white;
+  position: relative;
+}
+.counter span {
+  font-size: 2em;
+}
+
+span {
+  font-weight: 700;
+}
+h1 {
+  font-size: 4em;
+  font-weight: lighter;
+  text-align: center;
+  padding-right: 6em;
+}
 .bottone {
-  width: 21em;
+  width: 34%;
   font-size: 20px;
-  padding: 15px;
-  border-radius: 30px;
+  padding: 20px;
+  border-radius: 35px;
   background: rgba(255, 255, 255, 0.08);
   border-color: white;
   box-shadow: -4px -2px 2px 1px rgba(0, 0, 0, 0.57);
   color: white;
   /*usiamo background per dare la trasparenza e riprendere il colore del background della pagina */
-}
-h1 {
-  font-size: 6em;
-  font-weight: lighter;
+  margin-right: 3em;
+  margin-bottom: 2em;
 }
