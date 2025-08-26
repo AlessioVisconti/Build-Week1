@@ -7,37 +7,37 @@
     <link rel="stylesheet" href="../style/voto.css" />
   </head>
   <body>
+    <div id="idLogo"><img src="../img/epicode_logo.png" alt="logo epicode" id="logo" /></div>
     <div class="contenitore">
-      <div id="idLogo"><img src="../img/epicode_logo.png" alt="logo epicode" id="logo" /></div>
-      <div>
-        <h1>Results</h1>
-        <p>The summary of your answers:</p>
-        <div class="contenitore-voti">
-          <!-- contenitore di tutti i div counter e voti -->
-          <div class="voto">
-            <div>Correct</div>
-            <div>percentuale</div>
+      <h1>Results</h1>
+      <p>The summary of your answers:</p>
+      <div class="contenitore-voti">
+        <!-- contenitore di tutti i div counter e voti -->
+        <div class="voto">
+          <div class="votoleft">
+            <div class="esito">Correct</div>
+            <div class="percentuale" id="percentuale">percentuale</div>
             <div>question esatte</div>
           </div>
-          <div class="voto">
-            <div id="circle-timer">
-              <div id="inner-circle">
-                <div id="position-second">
-                  <div class="text-timer"><p>Congrats</p></div>
-                  <div class="second"><p></p></div>
-                  <div class="text-timer"><p>REMAINING</p></div>
-                </div>
-              </div>
+        </div>
+        <div class="voto">
+          <div class="progress-circle">
+            <div class="inner-circle">
+              <div class="congrats" id="congrats"><p>Congrats</p></div>
             </div>
           </div>
-          <div class="voto">
-            <div>Wrong</div>
-            <div>percentuale</div>
-            <div>question sbagliate</div>
-          </div>
         </div>
-              
       </div>
+      <div class="voto">
+        <div class="votoright">
+          <div class="esito">Wrong</div>
+          <div class="percentuale" id="percentuale">percentuale</div>
+          <div>question sbagliate</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button id="button">RATE US</button>
     </div>
   </body>
 </html>

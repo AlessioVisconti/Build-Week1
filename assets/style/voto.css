@@ -5,70 +5,77 @@ body {
   margin: 0;
   color: white;
   font-family: sans-serif;
+  margin: 7rem 0rem 6rem 12rem;
+  padding: 2em 0em 0em 27em;
 }
+
 #logo {
   width: 200px;
   text-align: left;
 }
+
 .contenitore {
-  margin: 7rem 0rem 6rem 12rem;
-  padding: 2em 0em 0em 27em;
+  text-align: center;
 }
+
 h1 {
   font-size: 6em;
   font-weight: lighter;
   text-align: center;
   margin-bottom: 0;
 }
+
 p {
   text-align: center;
 }
+
 .contenitore-voti {
   text-align: center;
   width: 100%;
 }
+
 .voto {
   width: 30%;
-  text-align: center;
   display: inline-block;
 }
-#circle-timer {
+.votoleft {
+  text-align: left;
+  display: inline-block;
+}
+.votoright {
+  text-align: right;
+  display: inline-block;
+}
+.progress-circle {
+  border-radius: 50%;
   color: white;
   display: inline-block;
   position: relative;
   height: 5rem;
   width: 5rem;
+}
+.inner-circle {
   border-radius: 50%;
-  background: conic-gradient(from 90deg, #00ffff 0deg 360deg, rgba(255, 255, 255, 0.1));
 }
-
-#inner-circle {
-  position: absolute;
-  width: 80%;
-  height: 80%;
-  top: 0.5rem;
-  left: 0.5rem;
-  border-radius: 50%;
-  background: url("./bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-.text-timer {
-  font-size: 5px;
-}
-
-.second {
-  font-size: 25px;
-}
-
-#position-second {
-  line-height: 15px;
+.congrats {
   text-align: center;
+  font-size: 30px;
+}
+
+.esito {
+  font-size: 4em;
+}
+.percentuale {
+  font-size: 4em;
+}
+#button {
+  font-size: 20px;
+  font-weight: 700;
+  width: 18em;
+  height: 4em;
+  margin-top: 5em;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 0%;
+  border-color: white;
+  color: white;
 }
