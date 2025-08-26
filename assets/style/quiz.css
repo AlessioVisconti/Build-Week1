@@ -1,3 +1,5 @@
+/* STILE DI BASE DELLA PAGINA */
+
 body {
   background: url("../img/bg.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -6,10 +8,13 @@ body {
   color: white;
   font-family: sans-serif;
 }
+
 .background {
   margin: 7rem 0rem 6rem 12rem;
   padding: 2em 0em 0em 27em;
 }
+
+/* Logo Epicode */
 .logo {
   width: 200px;
 }
@@ -47,17 +52,26 @@ body {
   font-size: 48px;
   line-height: 1;
   font-weight: 700;
+/* spazio per countdown */
+}
+.counter span {
+  font-size: 2em;
 }
 
+/* Testo in grassetto */
 span {
   font-weight: 700;
 }
+
+/* Titolo domanda */
 h1 {
   font-size: 4em;
   font-weight: lighter;
   text-align: center;
   padding-right: 6em;
 }
+
+/* Bottoni delle risposte */
 .bottone {
   width: 34%;
   font-size: 20px;
@@ -67,7 +81,71 @@ h1 {
   border-color: white;
   box-shadow: -4px -2px 2px 1px rgba(0, 0, 0, 0.57);
   color: white;
-  /*usiamo background per dare la trasparenza e riprendere il colore del background della pagina */
   margin-right: 3em;
   margin-bottom: 2em;
+}
+
+
+/* Contenitore principale della selezione */
+.selection {
+  margin: 7rem 0rem 6rem 12rem;
+  padding-left: 23em;
+  width: 55%;
+  background: transparent;
+  text-align: center;
+}
+
+/* Titolo della selezione */
+.selection h1 {
+  font-size: 3em;
+  font-weight: lighter;
+  margin-bottom: 1em;
+  padding-left: 5em;
+}
+
+/* Label dei campi (difficoltà, numero domande) */
+.selection label {
+  display: block;
+  margin: 1em 0 0.5em 0;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+/* Select e input per la selezione */
+.selection select,
+.selection input {
+  padding: 0.6em;
+  font-size: 1.1em;
+  border-radius: 1em;
+  border: 0.1em solid white;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  text-align: center;
+}
+
+/* Opzioni del select */
+.selection select option {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Bottone "Avvia quiz" */
+#start-quiz-button {
+  margin-top: 2em;
+  font-size: 1.2em;
+  padding: 1em 2.5em;
+  border-radius: 2em;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0.15em solid white;
+  color: white;
+  cursor: pointer;
+  box-shadow: -4px -2px 2px 1px rgba(0, 0, 0, 0.57);
+}
+
+/* Effetto hover sul bottone */
+#start-quiz-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+#quiz-container {
+  display: none;
 }
