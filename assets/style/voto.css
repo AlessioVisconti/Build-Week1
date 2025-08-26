@@ -1,0 +1,74 @@
+body {
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  color: white;
+  font-family: sans-serif;
+}
+#logo {
+  width: 200px;
+  text-align: left;
+}
+.contenitore {
+  margin: 7rem 0rem 6rem 12rem;
+  padding: 2em 0em 0em 27em;
+}
+h1 {
+  font-size: 6em;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 0;
+}
+p {
+  text-align: center;
+}
+.contenitore-voti {
+  text-align: center;
+  width: 100%;
+}
+.voto {
+  width: 30%;
+  text-align: center;
+  display: inline-block;
+}
+#circle-timer {
+  color: white;
+  display: inline-block;
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, #00ffff 0deg 360deg, rgba(255, 255, 255, 0.1));
+}
+
+#inner-circle {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 0.5rem;
+  left: 0.5rem;
+  border-radius: 50%;
+  background: url("./bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.text-timer {
+  font-size: 5px;
+}
+
+.second {
+  font-size: 25px;
+}
+
+#position-second {
+  line-height: 15px;
+  text-align: center;
+}
