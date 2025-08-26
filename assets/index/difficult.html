@@ -3,9 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quiz Start</title>
+    <link rel="stylesheet" href="../style/start.css" />
   </head>
   <body>
-    <p>scegli difficoltà</p>
+    <div class="container">
+      <h1>Benvenuto al Quiz</h1>
+
+      <label for="difficulty-select">Scegli la difficoltà:</label>
+      <select id="difficulty-select">
+        <option value="easy">Facile</option>
+        <option value="medium">Media</option>
+        <option value="hard">Difficile</option>
+      </select>
+
+      <label for="num-questions">Numero di domande:</label>
+      <input type="number" id="num-questions" min="1" max="10" value="5" />
+
+      <button id="start-quiz-button">Avvia Quiz</button>
+    </div>
+
+    <script src="../js/quiz.js"></script>
   </body>
 </html>
