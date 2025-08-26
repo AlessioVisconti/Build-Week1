@@ -21,17 +21,21 @@ body {
   border-radius:50%;
   background:#3a214d;
   box-shadow:
-    0 0 0 3px rgba(255,255,255,0.25) inset,
-    0 0 0 10px rgba(196,149,255,0.12) inset,
-    0 0 0 18px rgba(255,255,255,0.08) inset,
-    0 14px 28px rgba(0,0,0,0.35);
+    0 0 0 3px #321345 inset,
+    0 0 0 10px #321366 inset,
+    0 0 0 18px #321388 inset,
+    0 14px 28px #321322;
 }
 
 .counter_2{
   position:absolute;
   top:8px; left:8px; right:8px; bottom:8px;
   border-radius:50%;
-  background: radial-gradient(100px 100px at 30% 30%, rgba(255,255,255,0.18), rgba(0,0,0,0.25));
+  background: radial-gradient(
+  100px 100px at 30% 30%,
+  #321366,
+  #321322    
+);
   box-shadow: 0 0 0 3px rgba(255,255,255,0.25) inset;
 }
 
