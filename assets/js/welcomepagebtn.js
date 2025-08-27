@@ -16,7 +16,7 @@ chechboxPart.addEventListener("change", () => {
   } else {
     proceedBtn.classList.remove("attivo");
     proceedBtn.classList.add("nonAttivo");
-    proceedBtn.disabled = tru;
+    proceedBtn.disabled = true;
   }
 });
 
