@@ -17,28 +17,37 @@ const answerButtonsContainer = document.querySelector(".container-bottoni");
 
 // Tutti i pulsanti delle risposte
 const answerButtons = answerButtonsContainer.querySelectorAll(".bottone");
-//TIMER//
-document.addEventListener("DOMContentLoaded", () => {
-  const START_TIME = 60;
-  const countdownEl = document.getElementById("countdown");
-  let timeLeft = START_TIME;
 
-  countdownEl.textContent = timeLeft;
+// TIMER //
+// Elementi e variabili globali del timer
+const START_TIME = 60; // tempo di partenza (60 secondi)
+let timeLeft = START_TIME; // tempo rimanente
+let timer; // variabile che conterrà l'intervallo
+const countdownEl = document.getElementById("countdown");
 
-  const timer = setInterval(() => {
+// Funzione per avviare/reset del timer
+function startTimer(onTimeUp) {
+  clearInterval(timer); // prima cancello eventuale timer precedente
+  timeLeft = START_TIME; // resetto il tempo
+  countdownEl.textContent = timeLeft; // aggiorno subito il testo
+
+  // avvio l'intervallo ogni secondo
+  timer = setInterval(() => {
     timeLeft--;
 
     if (timeLeft <= 0) {
       countdownEl.textContent = "0";
-      clearInterval(timer);
+      clearInterval(timer); // fermo il timer
+      if (typeof onTimeUp === "function") {
+        onTimeUp(); // se passo una funzione, la eseguo allo scadere
+      }
     } else {
-      countdownEl.textContent = timeLeft;
+      countdownEl.textContent = timeLeft; // aggiorno il testo ogni secondo
     }
   }, 1000);
-});
+}
 
 // ARRAY DELLE DOMANDE
-
 const allQuestions = [
   {
     difficulty: "easy",
@@ -271,9 +280,8 @@ const allQuestions = [
     incorrect_answers: ["Twofish", "Serpent", "Blowfish"],
   },
 ];
-//Spread operator (...): prende tutti gli elementi di un array o le proprietà di un oggetto e li spande in modo tale che siano singoli come se scrivessimo ogni elemento separatamente
-// EVENTO DI AVVIO QUIZ
 
+// EVENTO DI AVVIO QUIZ
 startButton.addEventListener("click", function () {
   // Leggo la difficoltà selezionata dall’utente
   const difficulty = document.getElementById("difficulty-select").value;
@@ -290,7 +298,6 @@ startButton.addEventListener("click", function () {
 });
 
 // FUNZIONE PRINCIPALE DEL QUIZ
-
 function startQuiz(selectedDifficulty, maxQuestions) {
   let currentQuestionIndex = 0; // Indice della domanda attuale
   let userCorrectAnswers = 0; // Risposte corrette date dall’utente
@@ -313,13 +320,19 @@ function startQuiz(selectedDifficulty, maxQuestions) {
   showQuestion();
 
   // MOSTRA UNA DOMANDA
-
   function showQuestion() {
     // Se non ci sono più domande, mostro i risultati finali
     if (currentQuestionIndex >= filteredQuestions.length) {
       showResults();
       return;
     }
+
+    // Ogni volta che parte una nuova domanda resetto il timer
+    startTimer(() => {
+      // cosa succede se finisce il tempo:
+      currentQuestionIndex++;
+      showQuestion();
+    });
 
     // Prendo la domanda corrente
     const currentQuestion = filteredQuestions[currentQuestionIndex];
@@ -356,13 +369,12 @@ function startQuiz(selectedDifficulty, maxQuestions) {
         setTimeout(function () {
           currentQuestionIndex++;
           showQuestion();
-        }, 800); //l'800 sono i millisecondi, in modo che vedono l'animazione rossa verde
+        }, 800); // l'800 sono i millisecondi, in modo che vedono l'animazione rossa verde
       };
     });
   }
 
   // MOSTRA RISULTATI FINALI
-
   function showResults() {
     questionTitle.textContent = "Quiz terminato! Corrette: " + userCorrectAnswers + " - Sbagliate: " + userWrongAnswers;
 
@@ -370,11 +382,12 @@ function startQuiz(selectedDifficulty, maxQuestions) {
     answerButtons.forEach(function (button) {
       button.style.display = "none";
     });
+
+    clearInterval(timer); // fermo il timer quando finisce il quiz
   }
 }
 
 // FUNZIONE PER MESCOLARE UN ARRAY
-
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const randomIndex = Math.floor(Math.random() * (i + 1));
