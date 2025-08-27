@@ -48,6 +48,45 @@
         <button class="bottone"></button>
       </div>
     </div>
+    <!--Risultati-->
+    <div class="contenitore" id="results-container">
+      <h1>Results</h1>
+      <p>The summary of your answers:</p>
+
+      <div class="contenitore-voti">
+        <!-- Risultati corretti -->
+        <div class="voto">
+          <div class="votoleft">
+            <div class="esito">Correct</div>
+            <div class="percentuale" id="correct-percent">0%</div>
+            <div id="correct-answers">0 correct answers</div>
+          </div>
+        </div>
+
+        <!-- Cerchio progresso -->
+        <div class="voto">
+          <div class="progress-circle" id="progress-circle">
+            <div class="inner-circle" id="inner-circle">
+              <div class="congrats" id="congrats"><p>Congrats</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Risultati sbagliati -->
+        <div class="voto">
+          <div class="votoright">
+            <div class="esito">Wrong</div>
+            <div class="percentuale" id="wrong-percent">0%</div>
+            <div id="wrong-answers">0 wrong answers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottone risultati -->
+    <div class="contenitore-button" id="results-button">
+      <button id="button">RATE US</button>
+    </div>
 
     <script src="../js/script.js"></script>
   </body>

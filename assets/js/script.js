@@ -31,7 +31,7 @@ function startTimer(onTimeUp) {
   timeLeft = START_TIME; // resetto il tempo
   countdownEl.textContent = timeLeft; // aggiorno subito il testo
 
-  // avvio l'intervallo ogni secondo
+  // Avvio l'intervallo ogni secondo
   timer = setInterval(() => {
     timeLeft--;
 
@@ -373,27 +373,47 @@ function startQuiz(selectedDifficulty, maxQuestions) {
       };
     });
   }
-
-  // MOSTRA RISULTATI FINALI
+  //FUNZIONE MOSTRA RISULTATI//
   function showResults() {
-    questionTitle.textContent = "Quiz terminato! Corrette: " + userCorrectAnswers + " - Sbagliate: " + userWrongAnswers;
+    const totalAnswers = userCorrectAnswers + userWrongAnswers;
 
-    // Nascondo i pulsanti delle risposte
-    answerButtons.forEach(function (button) {
-      button.style.display = "none";
-    });
+    // Calcolo percentuali, evita divisione per zero
+    const correctPercentage = totalAnswers > 0 ? Math.round((userCorrectAnswers / totalAnswers) * 100) : 0;
+    const wrongPercentage = totalAnswers > 0 ? Math.round((userWrongAnswers / totalAnswers) * 100) : 0;
 
-    clearInterval(timer); // fermo il timer quando finisce il quiz
+    // Nascondo il quiz
+    const quizContainer = document.getElementById("quiz-container");
+    quizContainer.style.display = "none";
+
+    // Mostro i risultati
+    const resultsContainer = document.getElementById("results-container");
+    resultsContainer.style.display = "block";
+
+    // Aggiorno i dati dei risultati
+    document.getElementById("correct-percent").textContent = correctPercentage + "%";
+    document.getElementById("wrong-percent").textContent = wrongPercentage + "%";
+    document.getElementById("correct-answers").textContent = userCorrectAnswers + " correct answers";
+    document.getElementById("wrong-answers").textContent = userWrongAnswers + " wrong answers";
+
+    // Aggiorno il cerchio esterno
+    var progressCircle = document.getElementById("progress-circle");
+    var angle = correctPercentage * 3.6; // percentuale in gradi
+    progressCircle.style.background = "conic-gradient(#00bfff " + angle + "deg, #ff00ff 0deg)";
+
+    // Ferma il timer se esiste
+    if (typeof timer !== "undefined") {
+      clearInterval(timer);
+    }
   }
-}
 
-// FUNZIONE PER MESCOLARE UN ARRAY
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const randomIndex = Math.floor(Math.random() * (i + 1));
-    const temporaryValue = array[i];
-    array[i] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
+  // FUNZIONE PER MESCOLARE UN ARRAY
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const randomIndex = Math.floor(Math.random() * (i + 1));
+      const temporaryValue = array[i];
+      array[i] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
   }
-  return array;
 }

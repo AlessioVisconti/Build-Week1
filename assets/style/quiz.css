@@ -145,3 +145,97 @@ h1 {
 #quiz-container {
   display: none;
 }
+/*INIZIO AREA RISULTATI */
+.contenitore {
+  text-align: center;
+}
+
+.contenitore h1 {
+  font-size: 6em;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+p {
+  text-align: center;
+}
+
+.contenitore-voti {
+  text-align: center;
+  width: 100%;
+}
+
+.voto {
+  width: 30%;
+  display: inline-block;
+}
+.votoleft {
+  text-align: left;
+  display: inline-block;
+}
+.votoright {
+  text-align: right;
+  display: inline-block;
+}
+.progress-circle {
+  color: white;
+  display: inline-block;
+  position: relative;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  background: conic-gradient(#c2128d 270deg 180deg, #00ffff 180deg 360deg);
+}
+
+.inner-circle {
+  position: absolute;
+  width: 90%;
+  height: 88%;
+  top: 1em;
+  left: 1em;
+  border-radius: 50%;
+  background: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  mask-image: none;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.congrats {
+  text-align: center;
+  font-size: 30px;
+}
+
+.esito {
+  font-size: 4em;
+}
+.percentuale {
+  font-size: 4em;
+}
+.contenitore-button {
+  text-align: center;
+}
+#button {
+  font-size: 20px;
+  font-weight: 700;
+  width: 18em;
+  height: 4em;
+  margin-top: 5em;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 0%;
+  border-color: white;
+  color: white;
+}
+
+/* Nascondo la sezione dei risultati finché non termina il quiz */
+#results-container,
+#results-button {
+  display: none;
+}
