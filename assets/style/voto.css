@@ -5,8 +5,8 @@ body {
   margin: 0;
   color: white;
   font-family: sans-serif;
-  margin: 7rem 0rem 6rem 12rem;
-  padding: 2em 0em 0em 27em;
+  margin: 7rem 12rem 6rem 12rem;
+  padding: 2em 0em 0em 0em;
 }
 
 #logo {
@@ -32,6 +32,7 @@ p {
 .contenitore-voti {
   text-align: center;
   width: 100%;
+  height: ;
 }
 
 .voto {
@@ -47,16 +48,35 @@ p {
   display: inline-block;
 }
 .progress-circle {
-  border-radius: 50%;
   color: white;
   display: inline-block;
   position: relative;
-  height: 5rem;
-  width: 5rem;
-}
-.inner-circle {
+  height: 20rem;
+  width: 20rem;
   border-radius: 50%;
+  background: conic-gradient(#c2128d 270deg 180deg, #00ffff 180deg 360deg);
 }
+
+.inner-circle {
+  position: absolute;
+  width: 90%;
+  height: 88%;
+  top: 1em;
+  left: 1em;
+  border-radius: 50%;
+  background: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  mask-image: none;
+  background: rgba(255, 255, 255, 0.01);
+}
+
 .congrats {
   text-align: center;
   font-size: 30px;
@@ -67,6 +87,9 @@ p {
 }
 .percentuale {
   font-size: 4em;
+}
+.contenitore-button {
+  text-align: center;
 }
 #button {
   font-size: 20px;

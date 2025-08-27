@@ -12,7 +12,6 @@
       <h1>Results</h1>
       <p>The summary of your answers:</p>
       <div class="contenitore-voti">
-        <!-- contenitore di tutti i div counter e voti -->
         <div class="voto">
           <div class="votoleft">
             <div class="esito">Correct</div>
@@ -21,22 +20,22 @@
           </div>
         </div>
         <div class="voto">
-          <div class="progress-circle">
-            <div class="inner-circle">
+          <div class="progress-circle" id="progress-circle">
+            <div class="inner-circle" id="inner-circle">
               <div class="congrats" id="congrats"><p>Congrats</p></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="voto">
-        <div class="votoright">
-          <div class="esito">Wrong</div>
-          <div class="percentuale" id="percentuale">percentuale</div>
-          <div>question sbagliate</div>
+        <div class="voto">
+          <div class="votoright">
+            <div class="esito">Wrong</div>
+            <div class="percentuale" id="percentuale">percentuale</div>
+            <div>question sbagliate</div>
+          </div>
         </div>
       </div>
     </div>
-    <div>
+    <div class="contenitore-button">
       <button id="button">RATE US</button>
     </div>
   </body>
