@@ -19,40 +19,37 @@ body {
   width: 200px;
 }
 
-.counter_1{
-  position:absolute;
-  top:110px; right:482px;
-  width:140px; height:140px;
-  border-radius:50%;
-  background:#3a214d;
-  box-shadow:
-    0 0 0 3px #321345 inset,
-    0 0 0 10px #321366 inset,
-    0 0 0 18px #321388 inset,
-    0 14px 28px #321322;
+.counter_1 {
+  position: absolute;
+  top: 110px;
+  right: 482px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #3a214d;
+  box-shadow: 0 0 0 3px #321345 inset, 0 0 0 10px #321366 inset, 0 0 0 18px #321388 inset, 0 14px 28px #321322;
+  margin-right: -22em; /*spostare a destra */
 }
 
-.counter_2{
-  position:absolute;
-  top:8px; left:8px; right:8px; bottom:8px;
-  border-radius:50%;
-  background: radial-gradient(
-  100px 100px at 30% 30%,
-  #321366,
-  #321322    
-);
-  box-shadow: 0 0 0 3px rgba(255,255,255,0.25) inset;
+.counter_2 {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border-radius: 50%;
+  background: radial-gradient(100px 100px at 30% 30%, #321366, #321322);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25) inset;
 }
-
 
 #countdown {
   position: absolute;
-  top:30%;
+  top: 30%;
   left: 25%;
   font-size: 48px;
   line-height: 1;
   font-weight: 700;
-/* spazio per countdown */
+  /* spazio per countdown */
 }
 .counter span {
   font-size: 2em;
@@ -69,6 +66,7 @@ h1 {
   font-weight: lighter;
   text-align: center;
   padding-right: 6em;
+  margin-top: 2.5em;
 }
 
 /* Bottoni delle risposte */
@@ -84,7 +82,6 @@ h1 {
   margin-right: 3em;
   margin-bottom: 2em;
 }
-
 
 /* Contenitore principale della selezione */
 .selection {

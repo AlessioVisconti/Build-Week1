@@ -17,7 +17,7 @@ const answerButtonsContainer = document.querySelector(".container-bottoni");
 
 // Tutti i pulsanti delle risposte
 const answerButtons = answerButtonsContainer.querySelectorAll(".bottone");
-
+//TIMER//
 document.addEventListener("DOMContentLoaded", () => {
   const START_TIME = 60;
   const countdownEl = document.getElementById("countdown");
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 1000);
 });
-
 
 // ARRAY DELLE DOMANDE
 
@@ -70,6 +69,206 @@ const allQuestions = [
     question: "Code name for Android 7.0?",
     correct_answer: "Nougat",
     incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
+  },
+  {
+    type: "multiple",
+    difficulty: "easy",
+    category: "Science: Computers",
+    question: "What is the most preferred image format used for logos in the Wikimedia database?",
+    correct_answer: ".svg",
+    incorrect_answers: [".png", ".jpeg", ".gif"],
+  },
+  {
+    type: "multiple",
+    difficulty: "easy",
+    category: "Science: Computers",
+    question: "What is the domain name for the country Tuvalu?",
+    correct_answer: ".tv",
+    incorrect_answers: [".tu", ".tt", ".tl"],
+  },
+  {
+    type: "multiple",
+    difficulty: "easy",
+    category: "Science: Computers",
+    question: "On Twitter, what was the original character limit for a Tweet?",
+    correct_answer: "140",
+    incorrect_answers: ["120", "160", "100"],
+  },
+  {
+    type: "multiple",
+    difficulty: "easy",
+    category: "Science: Computers",
+    question: "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+    correct_answer: "Final",
+    incorrect_answers: ["Static", "Private", "Public"],
+  },
+  {
+    type: "multiple",
+    difficulty: "easy",
+    category: "Science: Computers",
+    question: "What does LTS stand for in the software market?",
+    correct_answer: "Long Term Support",
+    incorrect_answers: ["Long Taco Service", "Ludicrous Transfer Speed", "Ludicrous Turbo Speed"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: ".rs is the top-level domain for what country?",
+    correct_answer: "Serbia",
+    incorrect_answers: ["Romania", "Russia", "Rwanda"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "Approximately how many Apple I personal computers were created?",
+    correct_answer: "200",
+    incorrect_answers: ["100", "500", "1000"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "While Apple was formed in California, in which western state was Microsoft founded?",
+    correct_answer: "New Mexico",
+    incorrect_answers: ["Washington", "Colorado", "Arizona"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "Which internet company began life as an online bookstore called &#039;Cadabra&#039;?",
+    correct_answer: "Amazon",
+    incorrect_answers: ["eBay", "Overstock", "Shopify"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "Nvidia&#039;s headquarters are based in which Silicon Valley city?",
+    correct_answer: "Santa Clara",
+    incorrect_answers: ["Palo Alto", "Cupertino", "Mountain View"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "In HTML, which non-standard tag used to be be used to make elements scroll across the viewport?",
+    correct_answer: "&lt;marquee&gt;&lt;/marquee&gt;",
+    incorrect_answers: ["&lt;scroll&gt;&lt;/scroll&gt;", "&lt;move&gt;&lt;/move&gt;", "&lt;slide&gt;&lt;/slide&gt;"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "What does the term GPU stand for?",
+    correct_answer: "Graphics Processing Unit",
+    incorrect_answers: ["Gaming Processor Unit", "Graphite Producing Unit", "Graphical Proprietary Unit"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "Which of the following languages is used as a scripting language in the Unity 3D game engine?",
+    correct_answer: "C#",
+    incorrect_answers: ["Java", "C++", "Objective-C"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "What does AD stand for in relation to Windows Operating Systems? ",
+    correct_answer: "Active Directory",
+    incorrect_answers: ["Alternative Drive", "Automated Database", "Active Department"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "How good is Stefano? ",
+    correct_answer: "Absolute Genius",
+    incorrect_answers: ["Spectaculare", "Excellent", "Brillant"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "What does the International System of Quantities refer 1024 bytes as?",
+    correct_answer: "Kibibyte",
+    incorrect_answers: ["Kylobyte", "Kilobyte", "Kelobyte"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "Who is the founder of Palantir?",
+    correct_answer: "Peter Thiel",
+    incorrect_answers: ["Mark Zuckerberg", "Marc Benioff", "Jack Dorsey"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "Which of these names was an actual codename for a cancelled Microsoft project?",
+    correct_answer: "Neptune",
+    incorrect_answers: ["Enceladus", "Pollux", "Saturn"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "What is the name given to layer 4 of the Open Systems Interconnection (ISO) model?",
+    correct_answer: "Transport",
+    incorrect_answers: ["Session", "Data link", "Network"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "Which of the following is NOT a computer science algorithm?",
+    correct_answer: "Float Sort",
+    incorrect_answers: ["Bubble Sort", "Merge Sort", "Quick Sort"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "What was the name of the security vulnerability found in Bash in 2014?",
+    correct_answer: "Shellshock",
+    incorrect_answers: ["Heartbleed", "Bashbug", "Stagefright"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "Which of these is not a key value of Agile software development?",
+    correct_answer: "Comprehensive documentation",
+    incorrect_answers: ["Individuals and interactions", "Customer collaboration", "Responding to change"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "What type of sound chip does the Super Nintendo Entertainment System (SNES) have?",
+    correct_answer: "ADPCM Sampler",
+    incorrect_answers: ["FM Synthesizer", "Programmable Sound Generator (PSG)", "PCM Sampler"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "Australia, Japan, and Southeast Asia are in which ITU Region?",
+    correct_answer: "Region 3",
+    incorrect_answers: ["Region 1", "Region 2", "Region 4"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "Which encryption algorithm was selected as the AES standard by NIST in 2001?",
+    correct_answer: "Rijndael",
+    incorrect_answers: ["Twofish", "Serpent", "Blowfish"],
   },
 ];
 //Spread operator (...): prende tutti gli elementi di un array o le proprietà di un oggetto e li spande in modo tale che siano singoli come se scrivessimo ogni elemento separatamente

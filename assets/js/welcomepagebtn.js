@@ -24,6 +24,6 @@ chechboxPart.addEventListener("change", () => {
 
 proceedBtn.addEventListener("click", () => {
   if (!proceedBtn.disabled) {
-    window.location.href = "././assets/index/difficult.html";
+    window.location.href = "././assets/index/quizz.html";
   }
 });
