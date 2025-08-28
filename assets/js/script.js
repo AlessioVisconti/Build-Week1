@@ -80,7 +80,6 @@ const allQuestions = [
     incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
   },
   {
-    type: "multiple",
     difficulty: "easy",
     category: "Science: Computers",
     question: "What is the most preferred image format used for logos in the Wikimedia database?",
@@ -88,7 +87,6 @@ const allQuestions = [
     incorrect_answers: [".png", ".jpeg", ".gif"],
   },
   {
-    type: "multiple",
     difficulty: "easy",
     category: "Science: Computers",
     question: "What is the domain name for the country Tuvalu?",
@@ -96,7 +94,6 @@ const allQuestions = [
     incorrect_answers: [".tu", ".tt", ".tl"],
   },
   {
-    type: "multiple",
     difficulty: "easy",
     category: "Science: Computers",
     question: "On Twitter, what was the original character limit for a Tweet?",
@@ -104,7 +101,6 @@ const allQuestions = [
     incorrect_answers: ["120", "160", "100"],
   },
   {
-    type: "multiple",
     difficulty: "easy",
     category: "Science: Computers",
     question: "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
@@ -112,7 +108,6 @@ const allQuestions = [
     incorrect_answers: ["Static", "Private", "Public"],
   },
   {
-    type: "multiple",
     difficulty: "easy",
     category: "Science: Computers",
     question: "What does LTS stand for in the software market?",
@@ -120,7 +115,6 @@ const allQuestions = [
     incorrect_answers: ["Long Taco Service", "Ludicrous Transfer Speed", "Ludicrous Turbo Speed"],
   },
   {
-    type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
     question: ".rs is the top-level domain for what country?",
@@ -128,7 +122,6 @@ const allQuestions = [
     incorrect_answers: ["Romania", "Russia", "Rwanda"],
   },
   {
-    type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
     question: "Approximately how many Apple I personal computers were created?",
@@ -136,7 +129,6 @@ const allQuestions = [
     incorrect_answers: ["100", "500", "1000"],
   },
   {
-    type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
     question: "While Apple was formed in California, in which western state was Microsoft founded?",
@@ -144,7 +136,6 @@ const allQuestions = [
     incorrect_answers: ["Washington", "Colorado", "Arizona"],
   },
   {
-    type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
     question: "Which internet company began life as an online bookstore called &#039;Cadabra&#039;?",
@@ -152,7 +143,6 @@ const allQuestions = [
     incorrect_answers: ["eBay", "Overstock", "Shopify"],
   },
   {
-    type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
     question: "Nvidia&#039;s headquarters are based in which Silicon Valley city?",
@@ -160,7 +150,6 @@ const allQuestions = [
     incorrect_answers: ["Palo Alto", "Cupertino", "Mountain View"],
   },
   {
-    type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
     question: "In HTML, which non-standard tag used to be be used to make elements scroll across the viewport?",
@@ -168,7 +157,6 @@ const allQuestions = [
     incorrect_answers: ["&lt;scroll&gt;&lt;/scroll&gt;", "&lt;move&gt;&lt;/move&gt;", "&lt;slide&gt;&lt;/slide&gt;"],
   },
   {
-    type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
     question: "What does the term GPU stand for?",
@@ -176,7 +164,6 @@ const allQuestions = [
     incorrect_answers: ["Gaming Processor Unit", "Graphite Producing Unit", "Graphical Proprietary Unit"],
   },
   {
-    type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
     question: "Which of the following languages is used as a scripting language in the Unity 3D game engine?",
@@ -184,7 +171,6 @@ const allQuestions = [
     incorrect_answers: ["Java", "C++", "Objective-C"],
   },
   {
-    type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
     question: "What does AD stand for in relation to Windows Operating Systems? ",
@@ -192,7 +178,6 @@ const allQuestions = [
     incorrect_answers: ["Alternative Drive", "Automated Database", "Active Department"],
   },
   {
-    type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
     question: "How good is Stefano? ",
@@ -200,7 +185,6 @@ const allQuestions = [
     incorrect_answers: ["Spectaculare", "Excellent", "Brillant"],
   },
   {
-    type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
     question: "What does the International System of Quantities refer 1024 bytes as?",
@@ -208,7 +192,6 @@ const allQuestions = [
     incorrect_answers: ["Kylobyte", "Kilobyte", "Kelobyte"],
   },
   {
-    type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
     question: "Who is the founder of Palantir?",
@@ -216,7 +199,6 @@ const allQuestions = [
     incorrect_answers: ["Mark Zuckerberg", "Marc Benioff", "Jack Dorsey"],
   },
   {
-    type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
     question: "Which of these names was an actual codename for a cancelled Microsoft project?",
@@ -224,7 +206,6 @@ const allQuestions = [
     incorrect_answers: ["Enceladus", "Pollux", "Saturn"],
   },
   {
-    type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
     question: "What is the name given to layer 4 of the Open Systems Interconnection (ISO) model?",
@@ -232,7 +213,6 @@ const allQuestions = [
     incorrect_answers: ["Session", "Data link", "Network"],
   },
   {
-    type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
     question: "Which of the following is NOT a computer science algorithm?",
@@ -240,7 +220,6 @@ const allQuestions = [
     incorrect_answers: ["Bubble Sort", "Merge Sort", "Quick Sort"],
   },
   {
-    type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
     question: "What was the name of the security vulnerability found in Bash in 2014?",
@@ -248,7 +227,6 @@ const allQuestions = [
     incorrect_answers: ["Heartbleed", "Bashbug", "Stagefright"],
   },
   {
-    type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
     question: "Which of these is not a key value of Agile software development?",
@@ -256,7 +234,6 @@ const allQuestions = [
     incorrect_answers: ["Individuals and interactions", "Customer collaboration", "Responding to change"],
   },
   {
-    type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
     question: "What type of sound chip does the Super Nintendo Entertainment System (SNES) have?",
@@ -264,7 +241,6 @@ const allQuestions = [
     incorrect_answers: ["FM Synthesizer", "Programmable Sound Generator (PSG)", "PCM Sampler"],
   },
   {
-    type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
     question: "Australia, Japan, and Southeast Asia are in which ITU Region?",
@@ -272,7 +248,6 @@ const allQuestions = [
     incorrect_answers: ["Region 1", "Region 2", "Region 4"],
   },
   {
-    type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
     question: "Which encryption algorithm was selected as the AES standard by NIST in 2001?",
@@ -307,15 +282,22 @@ function startQuiz(selectedDifficulty, maxQuestions) {
   let filteredQuestions = allQuestions.filter(function (question) {
     return question.difficulty === selectedDifficulty;
   });
-
+  console.log("Domande filtrate", filteredQuestions);
   // Se non ci sono domande della difficoltà scelta, uso tutto l’array
   if (filteredQuestions.length === 0) {
     filteredQuestions = [...allQuestions];
   }
 
-  // Mischio le domande e ne prendo solo il numero richiesto
-  filteredQuestions = shuffleArray(filteredQuestions).slice(0, maxQuestions);
+  // Se il numero di domande richiesto è maggiore di quelle disponibili, lo limito
+  if (filteredQuestions.length < maxQuestions) {
+    maxQuestions = filteredQuestions.length;
+  }
 
+  filteredQuestions = shuffleArray(filteredQuestions);
+
+  // Mischio le domande e ne prendo solo il numero richiesto
+  filteredQuestions = filteredQuestions.slice(0, maxQuestions);
+  console.log("array domande filtrate con slice", filteredQuestions);
   // Mostro la prima domanda
   showQuestion();
 
@@ -389,6 +371,8 @@ function startQuiz(selectedDifficulty, maxQuestions) {
     // Mostro i risultati
     const resultsContainer = document.getElementById("results-container");
     resultsContainer.style.display = "block";
+    const rateUsButton = document.getElementById("results-button");
+    rateUsButton.style.display = "block";
 
     // Aggiorno i dati dei risultati
     document.getElementById("correct-percent").textContent = correctPercentage + "%";
