@@ -17,7 +17,7 @@ const answerButtonsContainer = document.querySelector(".container-bottoni");
 
 // Tutti i pulsanti delle risposte
 const answerButtons = answerButtonsContainer.querySelectorAll(".bottone");
-
+// const questionCounter = document.getElementById("question-counter");
 // TIMER //
 // Elementi e variabili globali del timer
 const START_TIME = 60; // tempo di partenza (60 secondi)
@@ -336,6 +336,7 @@ function startQuiz(selectedDifficulty, maxQuestions) {
 
     // Prendo la domanda corrente
     const currentQuestion = filteredQuestions[currentQuestionIndex];
+    // questionCounter.textContent = "Domanda " + (currentQuestionIndex + 1) + " su " + filteredQuestions.length;
     questionTitle.textContent = currentQuestion.question;
 
     // Creo un array con tutte le risposte (corretta + errate) mischiate
@@ -398,7 +399,8 @@ function startQuiz(selectedDifficulty, maxQuestions) {
     // Aggiorno il cerchio esterno
     var progressCircle = document.getElementById("progress-circle");
     var angle = correctPercentage * 3.6; // percentuale in gradi
-    progressCircle.style.background = "conic-gradient(from 0deg,  #ff00ff 0deg " + angle + "deg, #00bfff " + angle + "deg 360deg)";
+    var angleWrong = 360 - angle;
+    progressCircle.style.background = "conic-gradient(#ff00ff 0deg " + angleWrong + "deg, #00bfff " + angleWrong + "deg 360deg)";
 
     // Ferma il timer se esiste
     if (typeof timer !== "undefined") {

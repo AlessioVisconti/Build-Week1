@@ -145,6 +145,12 @@ h1 {
 #quiz-container {
   display: none;
 }
+#question-counter {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 1rem;
+  text-align: center;
+}
 /*INIZIO AREA RISULTATI */
 .contenitore {
   text-align: center;
