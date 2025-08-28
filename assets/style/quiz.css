@@ -12,8 +12,8 @@ body {
 }
 
 .background {
-  margin: 7rem 0rem 6rem 12rem;
-  padding: 2em 0em 0em 27em;
+  margin: 7rem 12rem 6rem 12rem;
+  padding: 2em 18em 0em 18em;
 }
 
 /* Logo Epicode */
@@ -67,11 +67,14 @@ h1 {
   font-size: 4em;
   font-weight: lighter;
   text-align: center;
-  padding-right: 6em;
+  /* padding-right: 6em; */
   margin-top: 2.5em;
 }
 
 /* Bottoni delle risposte */
+.container-bottoni {
+  text-align: center;
+}
 .bottone {
   width: 34%;
   font-size: 20px;
@@ -87,8 +90,8 @@ h1 {
 
 /* Contenitore principale della selezione */
 .selection {
-  margin: 7rem 0rem 6rem 12rem;
-  padding-left: 23em;
+  margin: 7rem 12rem 6rem 12rem;
+  padding: 2em 18em 0em 18em;
   width: 55%;
   background: transparent;
   text-align: center;
@@ -99,7 +102,7 @@ h1 {
   font-size: 3em;
   font-weight: lighter;
   margin-bottom: 1em;
-  padding-left: 5em;
+  /* padding-left: 5em; */
 }
 
 /* Label dei campi (difficoltà, numero domande) */
@@ -156,8 +159,8 @@ h1 {
 }
 /*INIZIO AREA RISULTATI */
 .background2 {
-  margin: 7rem 12rem 6rem 12rem;
-  padding: 0em 0em 0em 0em;
+  width: 850px;
+  margin-inline: auto;
 }
 .contenitore {
   text-align: center;
@@ -166,7 +169,7 @@ h1 {
 .contenitore h1 {
   font-size: 6em;
   font-weight: 700;
-  padding-left: 6em;
+  /* padding-left: 6em; */
   margin-bottom: 0;
 }
 
@@ -190,11 +193,9 @@ p {
 }
 .votoleft {
   text-align: left;
-  padding-left: 17em;
 }
 .votoright {
   text-align: right;
-  padding-right: 17em;
 }
 .progress-circle {
   color: white;
@@ -291,7 +292,6 @@ p {
 #counter-question {
   text-align: center;
   font-size: 2em;
-  padding-left: 8em;
 }
 #counter-question span {
   color: #c2128d;
