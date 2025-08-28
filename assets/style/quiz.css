@@ -288,3 +288,10 @@ p {
 #results-button {
   display: none;
 }
+#counter-question {
+  text-align: center;
+  font-size: 2em;
+}
+#counter-question span {
+  color: #c2128d;
+}

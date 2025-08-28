@@ -316,7 +316,8 @@ function startQuiz(selectedDifficulty, maxQuestions) {
       currentQuestionIndex++;
       showQuestion();
     });
-
+    // Ogni volta che parte un nuova domanda il counter si aggiorna
+    counterquestion.innerHTML = "QUESTION " + (currentQuestionIndex + 1) + " <span>/ " + filteredQuestions.length + "</span>";
     // Prendo la domanda corrente
     const currentQuestion = filteredQuestions[currentQuestionIndex];
     // questionCounter.textContent = "Domanda " + (currentQuestionIndex + 1) + " su " + filteredQuestions.length;
@@ -374,6 +375,12 @@ function startQuiz(selectedDifficulty, maxQuestions) {
     resultsContainer.style.display = "block";
     const rateUsButton = document.getElementById("results-button");
     rateUsButton.style.display = "block";
+
+    rateUsButton.addEventListener("click", () => {
+      if (!rateUsButton.disabled) {
+        window.location.href = "././assets/index/feedback.html";
+      }
+    });
 
     // Aggiorno i dati dei risultati
     document.getElementById("correct-percent").textContent = correctPercentage + "%";
