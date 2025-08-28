@@ -400,7 +400,7 @@ function startQuiz(selectedDifficulty, maxQuestions) {
     var progressCircle = document.getElementById("progress-circle");
     var angle = correctPercentage * 3.6; // percentuale in gradi
     var angleWrong = 360 - angle;
-    progressCircle.style.background = "conic-gradient(#ff00ff 0deg " + angleWrong + "deg, #00bfff " + angleWrong + "deg 360deg)";
+    progressCircle.style.background = "conic-gradient(#c2128d 0deg " + angleWrong + "deg, #00bfff " + angleWrong + "deg 360deg)";
 
     // Ferma il timer se esiste
     if (typeof timer !== "undefined") {

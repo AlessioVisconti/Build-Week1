@@ -8,36 +8,41 @@
   </head>
   <body>
     <div id="idLogo"><img src="../img/epicode_logo.png" alt="logo epicode" id="logo" /></div>
-    <div class="contenitore">
+    <!--Sezione risultati-->
+    <div class="contenitore" id="results-container">
       <h1>Results</h1>
       <p>The summary of your answers:</p>
+
       <div class="contenitore-voti">
+        <!--Risultati corretti-->
         <div class="voto">
           <div class="votoleft">
             <div class="esito">Correct</div>
-            <div class="percentuale" id="percentuale">66,7%</div>
-            <div>question esatte</div>
+            <div class="percentuale" id="percentuale">0%</div>
+            <div>0 correct answers</div>
           </div>
         </div>
+        <!-- Cerchio progresso-->
         <div class="voto">
-          <div>
-            <div class="progress-circle" id="progress-circle"></div>
-            <div class="inner-circle" id="inner-circle">
-              <div class="congrats" id="congrats"><span>Congrats</span></div>
-            </div>
+          <div class="progress-circle" id="progress-circle"></div>
+          <div class="inner-circle" id="inner-circle">
+            <div class="congrats" id="congrats"><span>Congrats</span></div>
           </div>
         </div>
+        <!--Risultati sbagliati-->
         <div class="voto">
           <div class="votoright">
             <div class="esito">Wrong</div>
-            <div class="percentuale" id="percentuale">33,3%</div>
-            <div>question sbagliate</div>
+            <div class="percentuale" id="percentuale">0%</div>
+            <div>0 wrong answers</div>
           </div>
         </div>
       </div>
     </div>
+    <!-- Bottone risultati-->
     <div class="contenitore-button">
       <button id="button">RATE US</button>
     </div>
+    <script src="../js/script.js"></script>
   </body>
 </html>
