@@ -378,7 +378,7 @@ function startQuiz(selectedDifficulty, maxQuestions) {
 
     rateUsButton.addEventListener("click", () => {
       if (!rateUsButton.disabled) {
-        window.location.href = "././assets/index/feedback.html";
+        window.location.href = "../index/feedback.html";
       }
     });
 
