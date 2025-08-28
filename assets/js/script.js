@@ -369,6 +369,7 @@ function startQuiz(selectedDifficulty, maxQuestions) {
     // Nascondo il quiz
     const quizContainer = document.getElementById("quiz-container");
     quizContainer.style.display = "none";
+    counterquestion.style.display = "none";
 
     // Mostro i risultati
     const resultsContainer = document.getElementById("results-container");

@@ -291,6 +291,7 @@ p {
 #counter-question {
   text-align: center;
   font-size: 2em;
+  padding-left: 8em;
 }
 #counter-question span {
   color: #c2128d;
