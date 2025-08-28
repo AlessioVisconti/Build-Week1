@@ -17,6 +17,7 @@ const answerButtonsContainer = document.querySelector(".container-bottoni");
 
 // Tutti i pulsanti delle risposte
 const answerButtons = answerButtonsContainer.querySelectorAll(".bottone");
+const counterquestion = document.getElementById("counter-question");
 // const questionCounter = document.getElementById("question-counter");
 // TIMER //
 // Elementi e variabili globali del timer
