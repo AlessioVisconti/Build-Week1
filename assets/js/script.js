@@ -398,7 +398,7 @@ function startQuiz(selectedDifficulty, maxQuestions) {
     // Aggiorno il cerchio esterno
     var progressCircle = document.getElementById("progress-circle");
     var angle = correctPercentage * 3.6; // percentuale in gradi
-    progressCircle.style.background = "conic-gradient(#00bfff " + angle + "deg, #ff00ff 0deg)";
+    progressCircle.style.background = "conic-gradient(from 0deg,  #ff00ff 0deg " + angle + "deg, #00bfff " + angle + "deg 360deg)";
 
     // Ferma il timer se esiste
     if (typeof timer !== "undefined") {

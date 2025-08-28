@@ -185,7 +185,7 @@ p {
   height: 20rem;
   width: 20rem;
   border-radius: 50%;
-  background: conic-gradient(#c2128d 270deg 180deg, #00ffff 180deg 360deg);
+  background: #ff00ff;
 }
 
 .inner-circle {
