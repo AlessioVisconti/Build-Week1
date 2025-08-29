@@ -21,9 +21,13 @@ body {
   width: 200px;
   text-align: left;
 }
+.cerchioTimer {
+  text-align: end;
+  width: 100%;
+}
 
 .counter_1 {
-  position: absolute;
+  /* position: absolute;
   top: 110px;
   right: 482px;
   width: 140px;
@@ -31,24 +35,52 @@ body {
   border-radius: 50%;
   background: #3a214d;
   box-shadow: 0 0 0 3px #321345 inset, 0 0 0 10px #321366 inset, 0 0 0 18px #321388 inset, 0 14px 28px #321322;
-  margin-right: -22em; /*spostare a destra */
+  margin-right: -22em; spostare a destra */
+  color: white;
+  display: inline-block;
+  position: relative;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  /* background: #ff00ff; */
+  /* background: #c2128d; */
+  background: conic-gradient(#00ffff 270deg 180deg, #00ffff 180deg 360deg);
+  mask-image: radial-gradient(circle, transparent 55%, black 56%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
 }
 
 .counter_2 {
-  position: absolute;
+  /* position: absolute;
   top: 8px;
   left: 8px;
   right: 8px;
   bottom: 8px;
   border-radius: 50%;
   background: radial-gradient(100px 100px at 30% 30%, #321366, #321322);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25) inset;
-}
-
-#countdown {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25) inset; */
   position: absolute;
-  top: 30%;
-  left: 25%;
+  width: 95%;
+  height: 88%;
+  top: 3em;
+  left: 3em;
+  border-radius: 50%;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  mask-image: none;
+}
+.countdownCenter {
+  position: absolute;
+  top: 21.7%;
+  left: 70.2%;
   font-size: 48px;
   line-height: 1;
   font-weight: 700;
@@ -68,7 +100,6 @@ h1 {
   font-weight: lighter;
   text-align: center;
   /* padding-right: 6em; */
-  margin-top: 2.5em;
 }
 
 /* Bottoni delle risposte */
@@ -255,7 +286,7 @@ p {
 }
 .congrats span {
   position: absolute; /* Posiziona l'elemento rispetto al contenitore */
-  top: 56%; /* Esempio: posiziona a metà altezza */
+  top: 40%; /* Esempio: posiziona a metà altezza */
   left: 50%; /* Esempio: posiziona a metà larghezza */
   transform: translate(-50%, -50%); /* Centra l'elemento */
   color: white; /* Colore del testo per renderlo visibile sull'immagine */

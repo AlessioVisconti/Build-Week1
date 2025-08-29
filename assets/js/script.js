@@ -25,16 +25,22 @@ const START_TIME = 60; // tempo di partenza (60 secondi)
 let timeLeft = START_TIME; // tempo rimanente
 let timer; // variabile che conterrà l'intervallo
 const countdownEl = document.getElementById("countdown");
-
+const counter11 = document.getElementById("counter_1");
 // Funzione per avviare/reset del timer
 function startTimer(onTimeUp) {
   clearInterval(timer); // prima cancello eventuale timer precedente
   timeLeft = START_TIME; // resetto il tempo
   countdownEl.textContent = timeLeft; // aggiorno subito il testo
+  counter11.textContent = timeLeft; // aggiorno subito il testo
 
   // Avvio l'intervallo ogni secondo
   timer = setInterval(() => {
     timeLeft--;
+    const percentageTime = (timeLeft / START_TIME) * 100;
+    const angleTime = percentageTime * 3.6;
+    const angleTime2 = 360 - angleTime;
+    // giocando sullo 0,4 aumentiamo l'opacità del trasparente)
+    counter11.style.background = "conic-gradient( rgba(255, 255, 255, 0.4) 0deg " + angleTime2 + "deg, #00ffff " + angleTime2 + "deg 360deg)";
 
     if (timeLeft <= 0) {
       countdownEl.textContent = "0";
@@ -186,6 +192,13 @@ const allQuestions = [
     incorrect_answers: ["Spectaculare", "Excellent", "Brillant"],
   },
   {
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "Chi è il Re Dei Pirati? ",
+    correct_answer: "Solo risposte sbagliate",
+    incorrect_answers: ["Solo risposte sbagliate", "Solo risposte sbagliate", "Solo risposte sbagliate"],
+  },
+  {
     difficulty: "hard",
     category: "Science: Computers",
     question: "What does the International System of Quantities refer 1024 bytes as?",
@@ -272,6 +285,16 @@ startButton.addEventListener("click", function () {
   // Avvio del quiz con i parametri scelti
   startQuiz(difficulty, numQuestions);
 });
+// FUNZIONE PER MESCOLARE UN ARRAY
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+    const temporaryValue = array[i];
+    array[i] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
 
 // FUNZIONE PRINCIPALE DEL QUIZ
 function startQuiz(selectedDifficulty, maxQuestions) {
@@ -293,10 +316,10 @@ function startQuiz(selectedDifficulty, maxQuestions) {
   if (filteredQuestions.length < maxQuestions) {
     maxQuestions = filteredQuestions.length;
   }
-
+  // Mischio le domande
   filteredQuestions = shuffleArray(filteredQuestions);
 
-  // Mischio le domande e ne prendo solo il numero richiesto
+  // ne prendo solo il numero richiesto
   filteredQuestions = filteredQuestions.slice(0, maxQuestions);
   console.log("array domande filtrate con slice", filteredQuestions);
   // Mostro la prima domanda
@@ -366,8 +389,20 @@ function startQuiz(selectedDifficulty, maxQuestions) {
     const totalAnswers = userCorrectAnswers + userWrongAnswers;
 
     // Calcolo percentuali, evita divisione per zero
-    const correctPercentage = totalAnswers > 0 ? Math.round((userCorrectAnswers / totalAnswers) * 100) : 0;
-    const wrongPercentage = totalAnswers > 0 ? Math.round((userWrongAnswers / totalAnswers) * 100) : 0;
+    // const correctPercentage = totalAnswers > 0 ? Math.round((userCorrectAnswers / totalAnswers) * 100) : 0; il ? sarebbe if else contratto
+    // const wrongPercentage = totalAnswers > 0 ? Math.round((userWrongAnswers / totalAnswers) * 100) : 0;
+    if (totalAnswers > 0) {
+      correctPercentage = Math.round((userCorrectAnswers / totalAnswers) * 100);
+    } else {
+      correctPercentage = 0;
+    }
+
+    let wrongPercentage;
+    if (totalAnswers > 0) {
+      wrongPercentage = Math.round((userWrongAnswers / totalAnswers) * 100);
+    } else {
+      wrongPercentage = 0;
+    }
 
     // Nascondo il quiz
     const quizContainer = document.getElementById("quiz-container");
@@ -393,25 +428,9 @@ function startQuiz(selectedDifficulty, maxQuestions) {
     document.getElementById("wrong-answers").textContent = userWrongAnswers + " wrong answers";
 
     // Aggiorno il cerchio esterno
-    var progressCircle = document.getElementById("progress-circle");
-    var angle = correctPercentage * 3.6; // percentuale in gradi
-    var angleWrong = 360 - angle;
-    progressCircle.style.background = "conic-gradient(#c2128d 0deg " + angleWrong + "deg, #00bfff " + angleWrong + "deg 360deg)";
-
-    // Ferma il timer se esiste
-    if (typeof timer !== "undefined") {
-      clearInterval(timer);
-    }
-  }
-
-  // FUNZIONE PER MESCOLARE UN ARRAY
-  function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const randomIndex = Math.floor(Math.random() * (i + 1));
-      const temporaryValue = array[i];
-      array[i] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-    return array;
+    let progressCircle = document.getElementById("progress-circle");
+    let angle = correctPercentage * 3.6; // percentuale in gradi
+    let angleWrong = 360 - angle;
+    progressCircle.style.background = "conic-gradient( #c2128d 0deg " + angleWrong + "deg, #00bfff " + angleWrong + "deg 360deg)";
   }
 }
