@@ -313,6 +313,9 @@ function startQuiz(selectedDifficulty, maxQuestions) {
     // Ogni volta che parte una nuova domanda resetto il timer
     startTimer(() => {
       // cosa succede se finisce il tempo:
+      // conta come risposta sbagliata:
+      userWrongAnswers++;
+      // si va alla prossima domanda
       currentQuestionIndex++;
       showQuestion();
     });

@@ -17,6 +17,7 @@ body {
 .background span {
   font-weight: 700;
 }
+/* Bottene parti comuni metterli nel bottone e non in attivo/non attivo */
 .nonAttivo {
   font-size: 32px;
   background-color: #324f4f;
@@ -26,7 +27,6 @@ body {
   box-shadow: 0 0 10px #324f4f, 0 0 20px #324f4f, 0 0 30px #324f4f;
   text-shadow: 0 0 5px #324f4f;
   font-weight: 700;
-  margin-left: 15em;
 }
 .attivo {
   font-size: 32px;
@@ -37,7 +37,6 @@ body {
   box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
   text-shadow: 0 0 5px #00ffff;
   font-weight: 700;
-  margin-left: 15em;
 }
 .logo {
   width: 200px;
@@ -69,4 +68,8 @@ li {
 
 .checkboxx:checked {
   appearance: auto;
+}
+label {
+  vertical-align: middle;
+  margin-right: 8em;
 }
